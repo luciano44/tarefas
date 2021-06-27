@@ -1,0 +1,67 @@
+.taskCompleted{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 30px;
+    margin: 5px 0 5px 5px;
+    background: #eeeff1;
+    color: darkgray;
+    box-shadow: inset 5px 0 0 #eeeff1;
+    cursor: pointer;
+    overflow: hidden;
+
+    span{
+        color: gray;
+        font-weight: 500;
+        margin-right: 5px;
+    }
+
+    p{
+        white-space: nowrap;
+        margin-left: 25px;
+    }
+
+    
+}
+
+.taskNotCompleted{
+    @extend .taskCompleted;
+    box-shadow: inset 5px 0 0 green;
+    background: linear-gradient(90deg,#d8ebd8,#d8ebd8,#eeeff1);
+    color: darkgreen;
+
+    span{
+        color: rgb(2, 70, 2);
+    }
+}
+
+.task-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkgray;
+    background: #eeeff1;
+    font-weight: 500;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    
+    .icon{
+        height: 20px;
+        width: 20px;
+        
+        &:hover{
+            filter: brightness(1.1);
+        }
+    }
+}
+
+.task-wrapper{
+    width: 100%;
+    margin: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
